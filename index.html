@@ -7,7 +7,7 @@
   <meta name="keywords" content="Design & Learning Research Group, euROBIN, MSVC, IROS 2024" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
-    Design & Learning Research Group Submission - euROBIN MSVC @ IROS 2024
+    南方科技大学设计与学习实验室 - euROBIN MSVC @ IROS 2024
   </title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
@@ -37,21 +37,21 @@
               euROBIN MSVC @ IROS 2024
             </h2>
             <h1 class="title is-2 publication-title">
-              Design & Learning Research Group Submission
+              设计与学习实验室竞赛方案演示
             </h1>
             <div class="is-size-5 publication-authors">
-              <span class="author-block"> Ning Guo, </span>
-              <span class="author-block"> Xudong Han </span>
-              <span class="author-block"> Haoran Sun, </span>
-              <span class="author-block"> Chaoyang Song*, </span>
+              <span class="author-block"> 郭宁, </span>
+              <span class="author-block"> 韩旭东 </span>
+              <span class="author-block"> 孙浩然, </span>
+              <span class="author-block"> 宋超阳* </span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://bionicdl.ancorasir.com">
-                  Design and Learning Research Group
+                  设计与学习实验室
                 </a>
-                @ <a href="https://www.sustech.edu.cn/en">SUSTech</a>
+                @ <a href="https://www.sustech.edu.cn">南方科技大学</a>
               </span>
             </div>
 
@@ -63,7 +63,7 @@
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
                     </span>
-                    <span>Video</span>
+                    <span>视频</span>
                   </a>
                 </span>
                 <!-- Code Link. -->
@@ -73,7 +73,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>代码</span>
                   </a>
                 </span>
                 <!-- Data Link. -->
@@ -83,16 +83,16 @@
                     <span class="icon">
                       <i class="fas fa-database"></i>
                     </span>
-                    <span>Data</span>
+                    <span>数据</span>
                   </a>
                 </span>
                 <!-- zh-CN Link. -->
                 <span class="link-block">
-                  <a href="https://msvc-dlrg.github.io/zh-cn" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://msvc-dlrg.github.io" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-globe"></i>
                     </span>
-                    <span>中文</span>
+                    <span>English</span>
                   </a>
               </div>
             </div>
@@ -115,21 +115,16 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Overview</h2>
+          <h2 class="title is-3">概述</h2>
           <div class="content has-text-justified">
             <p>
-              We present a solution for the euROBIN MSVC @ IROS 2024 competition.
-              To build up the robotics system, we use UR10e Cobot along with
-              commercially available parts, and designed fingers which can
-              robustify the manipulation of the probe and cables. To complete
-              the tasks, we collect images of the task board and fine-tuned
-              YOLOv8 to detect the key elements on the board (red/blue
-              buttons, red test port) and estimate 6D pose of the board in
-              robot base frame. For each task, we design a sequence of gripper
-              motions relative to the task board frame to make the task
-              execution invariant to the global pose of the board. Using the
-              estimated 6D pose of the board, we then convert all the motions
-              to robot base frame and send command to UR10e.
+              我们为euROBIN MSVC@IROS 2024竞赛提供了一个解决方案。为了构建机器人系统，
+              我们使用了UR10e Cobot以及商用零件，并设计了可以操纵探头和电缆的手指。为了
+              完成任务，我们收集任务板的图像，并对YOLOv8进行微调，以检测板上的关键元素
+              （红色/蓝色按钮、红色测试端口），并估计板在机器人基架中的6D姿态。对于每个
+              任务，我们设计了一系列相对于任务板框架的抓取器运动，使任务执行对板的全局姿
+              态不变。使用板的估计6D姿态，我们然后将所有运动转换为机器人基架，并向UR10e
+              发送命令。
             </p>
           </div>
         </div>
@@ -139,7 +134,7 @@
       <!-- Paper video. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Video</h2>
+          <h2 class="title is-3">视频</h2>
           <div class="publication-video">
             <iframe src="https://www.youtube.com/embed/6FlQ3zCi53w?rel=0&amp;showinfo=0" frameborder="0"
               allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -154,113 +149,105 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Robot Platform</h2>
+          <h2 class="title is-3">机器人平台</h2>
           <div class="content has-text-justified">
             <p>
-              The robot system used in the competition consists of a UR10e
-              collebrative robot, a Robotiq Hand-E gripper, a pair of
-              3D-printed fingertips, a Realsense D435i RGB-D camera, a camera
-              bracket, and a ZHIYUN FIVERAY M20 fill light.
+              比赛中使用的机器人系统由UR10e协作机器人、Robotiq Hand-E抓取器、一对3D打
+              印指尖、Realsense D435i RGB-D相机、相机支架和智云FIVERAY M20补光灯组成。
             </p>
           </div>
           <table align="center" width="80%" border="1">
             <tr>
-              <th width="20%">Equipment</th>
-              <th width="30%">Image</th>
-              <th width="50%">Description</th>
+              <th width="20%">设备</th>
+              <th width="30%">图片</th>
+              <th width="50%">描述</th>
             </tr>
             <tr>
               <td style="vertical-align: middle">
                 <a href="https://www.universal-robots.com/products/ur10-robot">
-                  UR10e Cobot
+                  UR10e 协作机器人
                 </a>
               </td>
               <td style="vertical-align: middle">
                 <img src="images/ur10e.png" alt="UR10e" width="60%" />
               </td>
               <td style="vertical-align: middle">
-                The UR10e cobot is mounted with the table and controlled
-                through the real-time data exchange (RTDE) interface by the
-                laptop.
+                UR10e 协作机器人安装在桌面旁，由笔记本电脑通过Real-Time Data Exchange
+                （RTDE）接口进行控制。
               </td>
             </tr>
             <tr>
               <td style="vertical-align: middle">
                 <a href="https://robotiq.com/products/adaptive-grippers#Hand-E">
-                  Robotiq Hand-E gripper
+                  Robotiq Hand-E 自适应夹爪
                 </a>
               </td>
               <td style="vertical-align: middle">
                 <img src="images/hand-e.png" alt="Hand-E" width="40%" />
               </td>
               <td style="vertical-align: middle">
-                The Hand-E gripper is mounted on the tool flange of the UR10e
-                cobot and controlled via the Modbus RTU RS485 protocol.
+                Robotiq Hand-E自适应夹爪安装在UR10e协作机器人的法兰上，并通过Modbus RTU RS485
+                协议进行控制。
               </td>
             </tr>
             <tr>
               <td style="vertical-align: middle">
                 <a href="https://cad.onshape.com/documents/43edc50e275c72eace7a4839">
-                  3D-printed fingertips
+                  3D打印指尖
                 </a>
               </td>
               <td style="vertical-align: middle">
                 <img src="images/fingertip.png" alt="3D-printed fingertips" width="70%" />
               </td>
               <td style="vertical-align: middle">
-                The fingertips are re-designed based on the original
-                fingertips of the Robotiq Hand-E gripper to adapt to the
-                competition tasks by adding grooves. They are 3D-printed with
-                nylon (HP PA12).
+                指尖是在Robotiq Hand-E自适应夹爪原有指尖的基础上重新设计的：通过添加凹槽来适应
+                比赛任务，并用尼龙材料（HP PA12）3D打印制成。
               </td>
             </tr>
 
             <tr>
               <td style="vertical-align: middle">
                 <a href="https://www.intelrealsense.com/depth-camera-d435i">
-                  Intel Realsense D435i camera
+                  Intel Realsense D435i 相机
                 </a>
               </td>
               <td style="vertical-align: middle">
                 <img src="images/d435i.png" alt="Realsense D435i" width="80%" />
               </td>
               <td style="vertical-align: middle">
-                The Realsense D435i RGB-D camera is mounted on the UR10e cobot
-                through a bracket and connected to the laptop through a USB
-                cable.
+                Realsense D435i 相机通过支架安装在UR10e协作机器人上，并通过USB数据线连接到笔记
+                本电脑。
               </td>
             </tr>
 
             <tr>
               <td style="vertical-align: middle">
                 <a href="https://cad.onshape.com/documents/01d4267b0af8aab9d6acb1ab">
-                  Camera bracket
+                  相机支架
                 </a>
               </td>
               <td style="vertical-align: middle">
                 <img src="images/camera_bracket.png" alt="Camera bracket" width="80%" />
               </td>
               <td style="vertical-align: middle">
-                The camera bracket is designed to mount the Realsense D435i
-                RGB-D camera on the UR10e cobot. It is frabricated by CNC with
-                Al6061.
+                相机支架被设计用于将Realsense D435i相机安装在UR10e协作机器人上。它由Al6061经
+                CNC加工而成。
               </td>
             </tr>
 
             <tr>
               <td style="vertical-align: middle">
-                <a href="https://www.zhiyun-tech.com/en/product/detail/867">
-                  ZHIYUN FIVERAY M20 fill light
+                <a href="https://www.zhiyun-tech.com/cn/product/detail/869">
+                  智云五倍 M20 补光灯
                 </a>
-                (Optinal)
+                (可选)
               </td>
               <td style="vertical-align: middle">
                 <img src="images/fiveray-m20.png" alt="FIVERAY M20" width="70%" />
               </td>
               <td style="vertical-align: middle">
-                The ZHIYUN FIVERAY M20 fill light is mounted on the camera to
-                provide sufficient illumination. It is up to 2010 Lux (0.5m)
-                and able to work for more than 40 minutes without charging.
+                ZHIYUN FIVERAY M20补光灯可安装在相机上，以提供足够的照明。其照度可达2010勒克斯
+                （0.5米），并且无需充电即可工作40分钟以上。
               </td>
             </tr>
           </table>
@@ -273,17 +260,14 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Solution</h2>
-          <h3 class="title is-4">Task 1-1: Task Board Pose Estimation</h3>
+          <h2 class="title is-3">任务解决方案</h2>
+          <h3 class="title is-4">任务 1-1: 任务面板的姿态估计</h3>
           <div class="content has-text-justified">
             <p>
-              The task board is placed at a random orientation on two velcro
-              strips to hold it in place for a trial. Therefore, for all
-              subsequent tasks, the task board needs to be localized. We use
-              fine-tuned YOLOv8 to detect the red button, blue button and the
-              red test port. As the positional relationship between these task
-              board elements is known and fixed, we can estimate the global 6D
-              pose (relative to the robot base) of the board.
+              任务面板以随机方向放置在两个尼龙粘条上，以将其固定到位进行试验。因此，对于所有后续
+              任务，任务面板都需要被定位。我们使用微调的YOLOv8模型来检测红色按钮、蓝色按钮和红色
+              表笔插孔。这些任务面板上的元素之间的位置关系是已知且固定的，因此可被用于估计面板相
+              对于机器人基座的全局6D姿态。
             </p>
           </div>
           <div class="columns is-centered">
@@ -294,27 +278,24 @@
               <img src="images/pose_ref.png" alt="Task Board Pose Relative to Robot Base" width="100%" />
             </div>
           </div>
-          <h3 class="title is-4">Task 1-2: Press Blue Button</h3>
+          <h3 class="title is-4">任务 1-2: 按下蓝色按钮</h3>
           <div class="content has-text-justified">
             <p>
-              To press the button, we first command the gripper to go right
-              over it and then lower the gripper position. Then the gripper
-              goes upward, preparing for the next task.
+              为了按下蓝色按钮，我们首先命令夹爪移动到其上方，然后降低夹爪位置以按下按钮。之后，
+              夹爪向上移动至安全位置，为执行下一个任务做好准备。
             </p>
           </div>
           <div class="content">
             <img src="images/blue_button.png" alt="Press Blue Button" width="80%" />
           </div>
           <h3 class="title is-4">
-            Task 2: Move Slider to Setpoints on Screen
+            任务 2: 将滑块移动到屏幕上的设定点
           </h3>
           <div class="content has-text-justified">
             <p>
-              After the gripper approaches to and securely grips the slider,
-              we detect the screen using another fine-tuned YOLOv8. The pixels
-              of the triangles displayed on the screen are extracted based on
-              their color to calculate the pixel distance error, which is then
-              projected to the actual distance to move along the slider track.
+              在抓取器接近并牢牢抓取滑块后，我们使用另一个微调的YOLOv8模型检测屏幕。根据显示在屏
+              幕上的三角形的颜色提取其像素并计算像素距离误差，然后将其投影到实际距离，令夹爪夹持
+              滑块向目标移动。
             </p>
           </div>
           <div class="content">
@@ -323,32 +304,23 @@
               <source src="videos/move_slider.mp4" type="video/mp4">
             </video>
           </div>
-          <h3 class="title is-4">Task 3: Plug in Probe into Test Port</h3>
+          <h3 class="title is-4">任务 3: 将表笔插头插入插孔</h3>
           <div class="content has-text-justified">
             <p>
-              We first move the gripper above the left probe, lower it down to
-              grip it. Although we do not estimate the precise orientation of
-              the probe, we find it robust enough to set a fixed rotatioio of
-              the gripper, since the probe orientation will be aligned with
-              the gripper after the gripper closes. To increase the
-              determinism of the cable wrapping task, we rotate the probe to a
-              known angle after plug it into the test port.
+              首先，夹爪移动到左探头上方，并在放下后夹紧表笔插头。虽然我们没有估计表笔插头的精确方向，
+              但是它足够坚固，可以设置夹爪旋转固定角度，在夹爪闭合后，表笔插头方向将与夹具对齐。为了
+              提高后续线缆缠绕任务的准确性，我们在将表笔插头插入插孔后将其旋转到了已知角度。
             </p>
           </div>
           <div class="content">
             <img src="images/plug_in_probe.png" alt="Plug in Probe into Test Port" width="80%" />
           </div>
-          <h3 class="title is-4">Task 4: Open Door, Probe Circuit</h3>
+          <h3 class="title is-4">任务 4: 打开门并检测电路</h3>
           <div class="content has-text-justified">
             <p>
-              To speed up the task execution, the gripper first pulls out the
-              probe, insert the probe tip into the gap of the door edges to
-              open it. Then the probe is inserted to the testing slot and is
-              put back to the probe slot. The task is challenging as the probe
-              may change its pose due to the contact with the task board, but
-              the grooves of the fingertips we design helps the gripper to
-              securely grasp the probe, dramatically increase the accuracy and
-              robustness of the manipulation process.
+              为了加快任务执行，夹爪首先拔出表笔，并将笔尖插入门边缘的间隙以打开它。之后，表笔插入检
+              测电路，并重新放回初始位置。这项任务具有挑战性，因为表笔可能会因与任务面板的接触而被改变
+              姿态，但我们设计的指尖凹槽有助于夹具安全地抓住探头，大大提高了操作过程的准确性和鲁棒性。
             </p>
           </div>
           <div class="content">
@@ -356,13 +328,11 @@
               <source src="videos/probe_circuit.mp4" type="video/mp4">
             </video>
           </div>
-          <h3 class="title is-4">Task 5: Wrap Cable, Replace Probe</h3>
+          <h3 class="title is-4">任务 5: 缠绕线缆并放回表笔</h3>
           <div class="content has-text-justified">
             <p>
-              To wrap the cable, we collect the gripper poses from human
-              demonstrated motions, and transform the poses to the task board
-              frame, making it invariant to the absolute position and
-              orientation of the board.
+              为了缠绕线缆，我们从示教中采集机器人的姿态，并将其转换至任务面板坐标系下，使其相对面板的
+              位置和方向不变。
             </p>
           </div>
           <div class="content">
@@ -370,12 +340,10 @@
               <source src="videos/wrap_cable.mp4" type="video/mp4">
             </video>
           </div>
-          <h3 class="title is-4">Task 6: Press Stop Trial Button</h3>
+          <h3 class="title is-4">任务 6: 按下停止按钮</h3>
           <div class="content has-text-justified">
             <p>
-              Pressing the stop trial button (red button) is similar as
-              pressing the blue button. Finally, the robot gripper Presses the
-              red button to finish the trial.
+              按下停止按钮（红色按钮）与按下蓝色按钮类似。最后，机器人夹爪按下红色按钮以终止计时。
             </p>
           </div>
           <div class="content">
@@ -389,11 +357,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Continuous Trials</h2>
+          <h2 class="title is-3">连续测试</h2>
           <div class="content has-text-justified">
             <p>
-              Here are 5 continuous trials with random initial poses of the
-              task board, showing the robustness of our solution.
+              以下是随机初始姿态下任务面板的5次连续测试，展示了我们解决方案的稳健性。
             </p>
           </div>
           <div class="content">
@@ -409,11 +376,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Fastest Trial</h2>
+          <h2 class="title is-3">最快单次测试</h2>
           <div class="content has-text-justified">
             <p>
-              Here is the fastest trial we have achieved according to the record
-              by the web board. The total trial time is 28.17s.
+              这是我们最快的单次测试，并根据联网数据记录，总试验时间为28.17秒。
             </p>
           </div>
           <div class="content">
@@ -430,16 +396,13 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Skill Transferability</h2>
+          <h2 class="title is-3">技能迁移</h2>
           <div class="content has-text-justified">
             <p>
-              We transfer the skill to battery extraction of smoke alarm. The
-              battery's pose is detected using YOLOv8 with the image captured
-              by the camera. The gripper go through the demonstrated trajectories
-              to lift up and grasp the battery and place beside the smoke alarm.
-              To pick up the new battery, the robot goes above it and the pose is
-              also detected by YOLOv8. The gripper pick up the battery and place into
-              the containers.
+              我们将技能迁移到烟雾报警器的电池替换上。首先使用YOLOv8识别相机捕获的图
+              像以检测电池的姿态。之后夹爪沿着示教的轨迹翘起并夹持电池，然后放置在
+              烟雾报警器旁边。为了拿起新电池，机器人会走到电池上方，YOLOv8也会
+              检测其姿态。最终，夹爪拿起电池并放入容器中。
             </p>
           </div>
           <div class="content">
