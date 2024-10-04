@@ -60,7 +60,8 @@
               <div class="publication-links">
                 <!-- Video Link. -->
                 <span class="link-block">
-                  <a href="https://www.bilibili.com/video/BV1134ceBEpW" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://www.bilibili.com/video/BV1134ceBEpW"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
                     </span>
@@ -119,7 +120,9 @@
           <h2 class="title is-3">概述</h2>
           <div class="content has-text-justified">
             <p>
-              我们在<a href="https://iros2024-abudhabi.org/">2024年IEEE/RSJ智能机器人与系统国际会议（IROS 2024）</a>的<a href="https://sites.google.com/view/eurobin-msvc">euROBIN操作技能挑战赛（Manipulation Skill Versatility Challenge）</a>中提出了一套任务解决方案。我们使用UR10e协作机器人，搭配Intel Realsense
+              我们在<a href="https://iros2024-abudhabi.org/">2024年IEEE/RSJ智能机器人与系统国际会议（IROS 2024）</a>的<a
+                href="https://sites.google.com/view/eurobin-msvc">euROBIN操作技能挑战赛（Manipulation Skill Versatility
+                Challenge）</a>中提出了一套任务解决方案。我们使用UR10e协作机器人，搭配Intel Realsense
               D435i相机和RobotiqHand-E夹爪，构建了机器人系统，并设计了方便操作表笔和线缆的带凹槽的指尖。为了完成任务，我们收集了任务面板的图像用于对YOLOv8模型的微调，以检测面板上的关键元素（红色/蓝色按钮、红色测试端口），以估计面板在机器人坐标系下的6D姿态。对于每个任务，我们设计了一系列相对于任务面板坐标系的抓取器运动，使任务执行的姿态相对于面板保持不变。然后，利用所估计的面板6D姿态，我们将所有运动转换到机器人坐标系下，并向UR10e发送命令，进而顺利完成全部任务。这一解决方案具有鲁棒性和迁移性，我们还将其成功迁移到了烟雾报警器的电池替换任务上。
             </p>
           </div>
