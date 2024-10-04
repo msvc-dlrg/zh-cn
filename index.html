@@ -118,13 +118,7 @@
           <h2 class="title is-3">概述</h2>
           <div class="content has-text-justified">
             <p>
-              我们为euROBIN MSVC@IROS 2024竞赛提供了一个解决方案。为了构建机器人系统，
-              我们使用了UR10e Cobot以及商用零件，并设计了可以操纵探头和电缆的手指。为了
-              完成任务，我们收集任务板的图像，并对YOLOv8进行微调，以检测板上的关键元素
-              （红色/蓝色按钮、红色测试端口），并估计板在机器人基架中的6D姿态。对于每个
-              任务，我们设计了一系列相对于任务板框架的抓取器运动，使任务执行对板的全局姿
-              态不变。使用板的估计6D姿态，我们然后将所有运动转换为机器人基架，并向UR10e
-              发送命令。
+              我们在euROBIN MSVC@IROS 2024竞赛中提出了一套任务解决方案。我们使用UR10e协作机器人，搭配Intel Realsense D435i相机和RobotiqHand-E夹爪，构建了机器人系统，并设计了方便操作表笔和线缆的带凹槽的指尖。为了完成任务，我们收集了任务面板的图像用于对YOLOv8模型的微调，以检测面板上的关键元素（红色/蓝色按钮、红色测试端口），以估计面板在机器人坐标系下的6D姿态。对于每个任务，我们设计了一系列相对于任务面板坐标系的抓取器运动，使任务执行的姿态相对于面板保持不变。然后，利用所估计的面板6D姿态，我们将所有运动转换到机器人坐标系下，并向UR10e发送命令，进而顺利完成全部任务。这一解决方案具有鲁棒性和迁移性，我们还将其成功迁移到了烟雾报警器的电池替换任务上。
             </p>
           </div>
         </div>
@@ -149,11 +143,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">机器人平台</h2>
+          <h2 class="title is-3">机器人系统</h2>
           <div class="content has-text-justified">
             <p>
-              比赛中使用的机器人系统由UR10e协作机器人、Robotiq Hand-E抓取器、一对3D打
-              印指尖、Realsense D435i RGB-D相机、相机支架和智云FIVERAY M20补光灯组成。
+              比赛中使用的机器人系统由UR10e协作机器人、Robotiq Hand-E抓取器、一对3D打印指尖、Realsense D435i RGB-D相机、相机支架和智云FIVERAY M20补光灯组成。
             </p>
           </div>
           <table align="center" width="80%" border="1">
@@ -172,8 +165,7 @@
                 <img src="images/ur10e.png" alt="UR10e" width="60%" />
               </td>
               <td style="vertical-align: middle">
-                UR10e 协作机器人安装在桌面旁，由笔记本电脑通过Real-Time Data Exchange
-                （RTDE）接口进行控制。
+                UR10e 协作机器人安装在桌面旁，由笔记本电脑通过Real-Time Data Exchange（RTDE）接口进行控制。
               </td>
             </tr>
             <tr>
@@ -186,8 +178,7 @@
                 <img src="images/hand-e.png" alt="Hand-E" width="40%" />
               </td>
               <td style="vertical-align: middle">
-                Robotiq Hand-E自适应夹爪安装在UR10e协作机器人的法兰上，并通过Modbus RTU RS485
-                协议进行控制。
+                Robotiq Hand-E自适应夹爪安装在UR10e协作机器人的法兰上，并通过Modbus RTU RS485协议进行控制。
               </td>
             </tr>
             <tr>
@@ -200,8 +191,7 @@
                 <img src="images/fingertip.png" alt="3D-printed fingertips" width="70%" />
               </td>
               <td style="vertical-align: middle">
-                指尖是在Robotiq Hand-E自适应夹爪原有指尖的基础上重新设计的：通过添加凹槽来适应
-                比赛任务，并用尼龙材料（HP PA12）3D打印制成。
+                指尖是在Robotiq Hand-E自适应夹爪原有指尖的基础上重新设计的：通过添加凹槽来适应比赛任务，并用尼龙材料（HP PA12）3D打印制成。
               </td>
             </tr>
 
@@ -215,8 +205,7 @@
                 <img src="images/d435i.png" alt="Realsense D435i" width="80%" />
               </td>
               <td style="vertical-align: middle">
-                Realsense D435i 相机通过支架安装在UR10e协作机器人上，并通过USB数据线连接到笔记
-                本电脑。
+                Realsense D435i 相机通过支架安装在UR10e协作机器人上，并通过USB数据线连接到笔记本电脑。
               </td>
             </tr>
 
@@ -230,8 +219,7 @@
                 <img src="images/camera_bracket.png" alt="Camera bracket" width="80%" />
               </td>
               <td style="vertical-align: middle">
-                相机支架被设计用于将Realsense D435i相机安装在UR10e协作机器人上。它由Al6061经
-                CNC加工而成。
+                相机支架被设计用于将Realsense D435i相机安装在UR10e协作机器人上。它由Al6061经CNC加工而成。
               </td>
             </tr>
 
@@ -246,8 +234,7 @@
                 <img src="images/fiveray-m20.png" alt="FIVERAY M20" width="70%" />
               </td>
               <td style="vertical-align: middle">
-                ZHIYUN FIVERAY M20补光灯可安装在相机上，以提供足够的照明。其照度可达2010勒克斯
-                （0.5米），并且无需充电即可工作40分钟以上。
+                ZHIYUN FIVERAY M20补光灯可安装在相机上，以提供足够的照明。其照度可达2010勒克斯（0.5米），并且无需充电即可工作40分钟以上。
               </td>
             </tr>
           </table>
@@ -264,79 +251,72 @@
           <h3 class="title is-4">任务 1-1: 任务面板的姿态估计</h3>
           <div class="content has-text-justified">
             <p>
-              任务面板以随机方向放置在两个尼龙粘条上，以将其固定到位进行试验。因此，对于所有后续
-              任务，任务面板都需要被定位。我们使用微调的YOLOv8模型来检测红色按钮、蓝色按钮和红色
-              表笔插孔。这些任务面板上的元素之间的位置关系是已知且固定的，因此可被用于估计面板相
-              对于机器人基座的全局6D姿态。
+              任务面板以随机方向放置在两个尼龙粘条上，以将其固定到位进行试验。因此，对于所有后续任务，任务面板都需要被定位。我们使用微调的YOLOv8模型来检测红色按钮、蓝色按钮和红色表笔插孔。这些任务面板上的元素之间的位置关系是已知且固定的，因此可被用于估计面板相对于机器人基座的全局6D姿态。
             </p>
           </div>
           <div class="columns is-centered">
-            <div class="column is-half" style="width: 40%;">
+            <div class="column is-half">
               <img src="images/pose_yolo.png" alt="Task Board Pose Estimation" width="100%" />
             </div>
-            <div class="column is-half" style="width: 40%;">
+            <div class="column is-half">
               <img src="images/pose_ref.png" alt="Task Board Pose Relative to Robot Base" width="100%" />
             </div>
           </div>
           <h3 class="title is-4">任务 1-2: 按下蓝色按钮</h3>
           <div class="content has-text-justified">
             <p>
-              为了按下蓝色按钮，我们首先命令夹爪移动到其上方，然后降低夹爪位置以按下按钮。之后，
-              夹爪向上移动至安全位置，为执行下一个任务做好准备。
+              为了按下蓝色按钮，我们首先命令夹爪移动到其上方，然后降低夹爪位置以按下按钮。之后，夹爪向上移动至安全位置，为执行下一个任务做好准备。
             </p>
           </div>
           <div class="content">
-            <img src="images/blue_button.png" alt="Press Blue Button" width="80%" />
+            <img src="images/blue_button.png" alt="Press Blue Button" width="100%" />
           </div>
           <h3 class="title is-4">
             任务 2: 将滑块移动到屏幕上的设定点
           </h3>
           <div class="content has-text-justified">
             <p>
-              在抓取器接近并牢牢抓取滑块后，我们使用另一个微调的YOLOv8模型检测屏幕。根据显示在屏
-              幕上的三角形的颜色提取其像素并计算像素距离误差，然后将其投影到实际距离，令夹爪夹持
-              滑块向目标移动。
+              在抓取器接近并牢牢抓取滑块后，我们使用另一个微调的YOLOv8模型检测屏幕。根据显示在屏幕上的三角形的颜色提取其像素并计算像素距离误差，然后将其投影到实际距离，令夹爪夹持滑块向目标移动。
             </p>
           </div>
-          <div class="content">
-            <img src="images/slider_screen.png" alt="Screen Detection by YOLOv8" width="40%" />
-            <video id="teaser" autoplay muted loop playsinline width="40%">
-              <source src="videos/move_slider.mp4" type="video/mp4">
-            </video>
+          <div class="columns is-centered">
+            <div class="column is-half">
+              <img src="images/slider_screen.png" alt="Screen Detection by YOLOv8" width="100%" />
+            </div>
+            <div class="column is-half">
+              <video id="teaser" autoplay muted loop playsinline width="100%">
+                <source src="videos/move_slider.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
           <h3 class="title is-4">任务 3: 将表笔插头插入插孔</h3>
           <div class="content has-text-justified">
             <p>
-              首先，夹爪移动到左探头上方，并在放下后夹紧表笔插头。虽然我们没有估计表笔插头的精确方向，
-              但是它足够坚固，可以设置夹爪旋转固定角度，在夹爪闭合后，表笔插头方向将与夹具对齐。为了
-              提高后续线缆缠绕任务的准确性，我们在将表笔插头插入插孔后将其旋转到了已知角度。
+              首先，夹爪移动到左探头上方，并在放下后夹紧表笔插头。虽然我们没有估计表笔插头的精确方向，但是它足够坚固，可以设置夹爪旋转固定角度，在夹爪闭合后，表笔插头方向将与夹具对齐。为了提高后续线缆缠绕任务的准确性，我们在将表笔插头插入插孔后将其旋转到了已知角度。
             </p>
           </div>
           <div class="content">
-            <img src="images/plug_in_probe.png" alt="Plug in Probe into Test Port" width="80%" />
+            <img src="images/plug_in_probe.png" alt="Plug in Probe into Test Port" width="100%" />
           </div>
           <h3 class="title is-4">任务 4: 打开门并检测电路</h3>
           <div class="content has-text-justified">
             <p>
-              为了加快任务执行，夹爪首先拔出表笔，并将笔尖插入门边缘的间隙以打开它。之后，表笔插入检
-              测电路，并重新放回初始位置。这项任务具有挑战性，因为表笔可能会因与任务面板的接触而被改变
-              姿态，但我们设计的指尖凹槽有助于夹具安全地抓住探头，大大提高了操作过程的准确性和鲁棒性。
+              为了加快任务执行，夹爪首先拔出表笔，并将笔尖插入门边缘的间隙以打开它。之后，表笔插入检测电路，并重新放回初始位置。这项任务具有挑战性，因为表笔可能会因与任务面板的接触而被改变姿态，但我们设计的指尖凹槽有助于夹具安全地抓住探头，大大提高了操作过程的准确性和鲁棒性。
             </p>
           </div>
           <div class="content">
-            <video id="teaser" autoplay muted loop playsinline width="80%">
+            <video id="teaser" autoplay muted loop playsinline width="100%">
               <source src="videos/probe_circuit.mp4" type="video/mp4">
             </video>
           </div>
           <h3 class="title is-4">任务 5: 缠绕线缆并放回表笔</h3>
           <div class="content has-text-justified">
             <p>
-              为了缠绕线缆，我们从示教中采集机器人的姿态，并将其转换至任务面板坐标系下，使其相对面板的
-              位置和方向不变。
+              为了缠绕线缆，我们从示教中采集机器人的姿态，并将其转换至任务面板坐标系下，使其相对面板的位置和方向不变。
             </p>
           </div>
           <div class="content">
-            <video id="teaser" autoplay muted loop playsinline width="80%">
+            <video id="teaser" autoplay muted loop playsinline width="100%">
               <source src="videos/wrap_cable.mp4" type="video/mp4">
             </video>
           </div>
@@ -347,7 +327,7 @@
             </p>
           </div>
           <div class="content">
-            <img src="images/stop_trial_button.png" alt="Press Stop Trial Button" width="80%" />
+            <img src="images/stop_trial_button.png" alt="Press Stop Trial Button" width="100%" />
           </div>
         </div>
       </div>
@@ -364,7 +344,7 @@
             </p>
           </div>
           <div class="content">
-            <video id="teaser" autoplay muted loop playsinline controls width="80%">
+            <video id="teaser" autoplay muted loop playsinline controls width="100%">
               <source src="videos/continuous_trials.mp4" type="video/mp4">
             </video>
           </div>
@@ -379,11 +359,11 @@
           <h2 class="title is-3">最快单次测试</h2>
           <div class="content has-text-justified">
             <p>
-              这是我们最快的单次测试，并根据联网数据记录，总试验时间为28.17秒。
+              这里展示了我们最快的单次测试。根据联网数据记录，总时间为28.17秒。
             </p>
           </div>
           <div class="content">
-            <video id="teaser" autoplay muted loop playsinline controls width="80%">
+            <video id="teaser" autoplay muted loop playsinline controls width="100%">
               <source src="videos/fastest_trial.mp4" type="video/mp4">
             </video>
           </div>
@@ -399,14 +379,11 @@
           <h2 class="title is-3">技能迁移</h2>
           <div class="content has-text-justified">
             <p>
-              我们将技能迁移到烟雾报警器的电池替换上。首先使用YOLOv8识别相机捕获的图
-              像以检测电池的姿态。之后夹爪沿着示教的轨迹翘起并夹持电池，然后放置在
-              烟雾报警器旁边。为了拿起新电池，机器人会走到电池上方，YOLOv8也会
-              检测其姿态。最终，夹爪拿起电池并放入容器中。
+              我们将技能迁移到烟雾报警器的电池替换上。首先使用YOLOv8识别相机捕获的图像以检测电池的姿态。之后夹爪沿着示教的轨迹翘起并夹持电池，放置在烟雾报警器旁边。接下来，为了拿起新电池，机器人会走到电池上方，YOLOv8检测电池姿态。最终，夹爪拿起电池并放入报警器中。
             </p>
           </div>
           <div class="content">
-            <video id="teaser" autoplay muted loop playsinline controls width="80%">
+            <video id="teaser" autoplay muted loop playsinline controls width="100%">
               <source src="videos/battery_extraction.mp4" type="video/mp4">
             </video>
           </div>
