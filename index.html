@@ -118,7 +118,8 @@
           <h2 class="title is-3">概述</h2>
           <div class="content has-text-justified">
             <p>
-              我们在euROBIN MSVC@IROS 2024竞赛中提出了一套任务解决方案。我们使用UR10e协作机器人，搭配Intel Realsense D435i相机和RobotiqHand-E夹爪，构建了机器人系统，并设计了方便操作表笔和线缆的带凹槽的指尖。为了完成任务，我们收集了任务面板的图像用于对YOLOv8模型的微调，以检测面板上的关键元素（红色/蓝色按钮、红色测试端口），以估计面板在机器人坐标系下的6D姿态。对于每个任务，我们设计了一系列相对于任务面板坐标系的抓取器运动，使任务执行的姿态相对于面板保持不变。然后，利用所估计的面板6D姿态，我们将所有运动转换到机器人坐标系下，并向UR10e发送命令，进而顺利完成全部任务。这一解决方案具有鲁棒性和迁移性，我们还将其成功迁移到了烟雾报警器的电池替换任务上。
+              我们在euROBIN MSVC@IROS 2024竞赛中提出了一套任务解决方案。我们使用UR10e协作机器人，搭配Intel Realsense
+              D435i相机和RobotiqHand-E夹爪，构建了机器人系统，并设计了方便操作表笔和线缆的带凹槽的指尖。为了完成任务，我们收集了任务面板的图像用于对YOLOv8模型的微调，以检测面板上的关键元素（红色/蓝色按钮、红色测试端口），以估计面板在机器人坐标系下的6D姿态。对于每个任务，我们设计了一系列相对于任务面板坐标系的抓取器运动，使任务执行的姿态相对于面板保持不变。然后，利用所估计的面板6D姿态，我们将所有运动转换到机器人坐标系下，并向UR10e发送命令，进而顺利完成全部任务。这一解决方案具有鲁棒性和迁移性，我们还将其成功迁移到了烟雾报警器的电池替换任务上。
             </p>
           </div>
         </div>
@@ -130,8 +131,9 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">视频</h2>
           <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/6FlQ3zCi53w?rel=0&amp;showinfo=0" frameborder="0"
-              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe
+              src="//player.bilibili.com/player.html?isOutside=true&aid=113248019943296&bvid=BV1134ceBEpW&cid=26135694411&p=1"
+              scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
           </div>
         </div>
       </div>
